@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  apache:
+    container_name: quiz-website
+    image: httpd:latest
+    volumes:
+      - ./:/usr/local/apache2/htdocs/
+    ports:
+      - 8080:80
