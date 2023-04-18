@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="page description" />
-  <meta property="og:title" content="page title" />
-  <meta property="og:description" content="page description" />
-  <meta property="og:url" content="page url" />
-  <meta property="og:image" content="image url" />
+    <meta name="description" content="page description" />
+    <meta property="og:title" content="page title" />
+    <meta property="og:description" content="page description" />
+    <meta property="og:url" content="page url" />
+    <meta property="og:image" content="image url" />
 
-  <link type="text/css" rel="stylesheet" href="/css/reset.css" />
-  <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="/css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
 
-  <title>Quiz</title>
-</head>
-<body>
-  <header class="header center-elements">
-    <nav>
-      <a href="index.html">Quiz</a>
-    </nav>
-  </header>
+    <title>Quiz</title>
+  </head>
 
-  <main class="main">
-    <div class="container-image">
-      <img src="#" class="image" />
-      <h1 class="quiz-title">Testando!</h1>
-    </div>
-    <div class="center-elements">
-      <button class="btn-quiz">Iniciar Quiz</button>
-    </div>
-  </main>
+  <body>
+    <header class="header center-elements">
+      <nav>
+        <a href="index.html">Quiz</a>
+      </nav>
+    </header>
 
-  <footer class="footer center-elements">
-    <p>©Copyright 2023<p>
-  </footer>
+    <main class="main">
+      <div class="container-image">
+        <img src="/images/eu-te-amo.jpg" class="image" />
+        <h1 class="quiz-title">O quão memista você é?</h1>
+      </div>
+      <div class="center-elements">
+        <div id="container-start-button" class="element element-active">
+          <button id="start-button" class="btn-quiz">Iniciar Quiz</button>
+        </div>
+        <div id="container-questions" class="container-questions element"></div>
+      </div>
+    </main>
 
-  <script type="text/javascript" src="/js/script.js"></script>
-</body>
+    <footer class="footer center-elements">
+      <p>©Copyright 2023<p>
+    </footer>
+
+    <script type="text/javascript" src="/js/show-questions.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
 </html>
