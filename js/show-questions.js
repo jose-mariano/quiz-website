@@ -1,31 +1,58 @@
-function showQuestions(containerQuestions, questions) {
-  const questionTitle = document.createElement('h2')
-  questionTitle.classList.add('question-title')
-  questionTitle.innerText = 'Pergunta?'
+function showQuestions(containerQuestions, questions, sendAnswers) {
+  if (questions.length < 1) {
+    return
+  }
 
-  const questionAlternatives = document.createElement('ol')
-  questionAlternatives.classList.add('question-alternatives')
+  const state = {
+    currentQuestionIndex: null,
+    currentQuestion: null,
+    answers: []
+  }
 
-  const alternative = document.createElement('li')
-  alternative.classList.add('alternative')
-  alternative.innerText = 'Resposta 1'
+  function updateScreen() {
+    containerQuestions.innerHTML = ''
 
-  const alternative2 = document.createElement('li')
-  alternative2.classList.add('alternative')
-  alternative2.innerText = 'Resposta 2'
+    if (!state.currentQuestion) {
+      return
+    }
 
-  const alternative3 = document.createElement('li')
-  alternative3.classList.add('alternative')
-  alternative3.innerText = 'Resposta 3'
+    const questionTitle = document.createElement('h2')
+    questionTitle.classList.add('question-title')
+    questionTitle.innerText = state.currentQuestion.question
 
-  const alternative4 = document.createElement('li')
-  alternative4.classList.add('alternative')
-  alternative4.innerText = 'Resposta 4'
+    const questionAlternatives = document.createElement('ol')
+    questionAlternatives.classList.add('question-alternatives')
 
-  questionAlternatives.appendChild(alternative)
-  questionAlternatives.appendChild(alternative2)
-  questionAlternatives.appendChild(alternative3)
-  questionAlternatives.appendChild(alternative4)
-  containerQuestions.appendChild(questionTitle)
-  containerQuestions.appendChild(questionAlternatives)
+    for (const alternativeIndex in state.currentQuestion.alternatives) {
+      const alternativeText = state.currentQuestion.alternatives[alternativeIndex]
+
+      const alternativeElement = document.createElement('li')
+      alternativeElement.classList.add('alternative')
+      alternativeElement.innerText = alternativeText
+      alternativeElement.addEventListener('click', () => {
+        state.answers.push(Number(alternativeIndex))
+        nextQuestion()
+      })
+
+      questionAlternatives.appendChild(alternativeElement)
+    }
+
+    containerQuestions.appendChild(questionTitle)
+    containerQuestions.appendChild(questionAlternatives)
+  }
+
+  function nextQuestion() {
+    state.currentQuestionIndex = (state.currentQuestionIndex !== null) ? state.currentQuestionIndex + 1 : 0
+    state.currentQuestion = null
+
+    if (state.currentQuestionIndex < questions.length) {
+      state.currentQuestion = questions[state.currentQuestionIndex]
+    } else {
+      sendAnswers(state.answers)
+    }
+
+    updateScreen()
+  }
+
+  nextQuestion()
 }
