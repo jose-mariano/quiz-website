@@ -25,15 +25,45 @@
     </header>
 
     <main class="main">
-      <div class="container-image">
-        <img src="/images/eu-te-amo.jpg" class="image" />
-        <h1 class="quiz-title">O quão memista você é?</h1>
-      </div>
       <div class="center-elements">
         <div id="container-start-button" class="element element-active">
+          <div class="container-image">
+            <img src="/images/eu-te-amo.jpg" class="image" />
+            <h1 class="quiz-title">O quão memista você é?</h1>
+          </div>
           <button id="start-button" class="btn-quiz">Iniciar Quiz</button>
         </div>
-        <div id="container-questions" class="container-questions element"></div>
+        <div id="container-questions" class="element">
+          <div class="question" data-question="1">
+            <div class="container-image">
+              <img src="/images/eu-te-amo.jpg" class="image" />
+            </div>
+            <h2 class="question-title">Pergunta 1?</h2>
+            <ol class="question-alternatives">
+              <li class="alternative" data-question="1" data-answer="a">Resposta 1</li>
+              <li class="alternative" data-question="1" data-answer="b">Resposta 2</li>
+              <li class="alternative" data-question="1" data-answer="c">Resposta 3</li>
+              <li class="alternative" data-question="1" data-answer="d">Resposta 4</li>
+            </ol>
+          </div>
+          <div class="question" data-question="2">
+            <div class="container-image">
+              <img src="/images/eu-te-amo.jpg" class="image" />
+            </div>
+            <h2 class="question-title">Pergunta 2?</h2>
+            <ol class="question-alternatives">
+              <li class="alternative" data-question="2" data-answer="a">Resposta 1</li>
+              <li class="alternative" data-question="2" data-answer="b">Resposta 2</li>
+              <li class="alternative" data-question="2" data-answer="c">Resposta 3</li>
+              <li class="alternative" data-question="2" data-answer="d">Resposta 4</li>
+            </ol>
+          </div>
+        </div>
+        <div id="container-result" class="element">
+          <div class="container-image">
+            <img src="/images/eu-te-amo.jpg" class="image" />
+          </div>
+        </div>
       </div>
     </main>
 

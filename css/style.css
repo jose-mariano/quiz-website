@@ -27,6 +27,7 @@
 .container-image {
   width: 100%;
   position: relative;
+  margin: 1rem;
 }
 
 .image {
@@ -46,8 +47,9 @@
   color: white;
 }
 
-.element {
+.element, .question {
   display: none;
+  width: 100%;
 }
 
 .element-active {
@@ -55,12 +57,11 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .btn-quiz {
   width: 80%;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 1rem;
   background-color: #7A59B0;
   color: white;

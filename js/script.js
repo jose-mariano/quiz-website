@@ -1,40 +1,32 @@
 function main() {
-  const questions = [
+  const answers = [
     {
-      question: 'Primeira pergunta?',
-      alternatives: [
-        'Resposta 1',
-        'Resposta 2',
-        'Resposta 3',
-        'Resposta 4'
-      ],
-      answer: 2
+      question: 1,
+      answer: 'c'
     },
     {
-      question: 'Segunda pergunta?',
-      alternatives: [
-        'Resposta 1',
-        'Resposta 2',
-        'Resposta 3',
-        'Resposta 4'
-      ],
-      answer: 0
+      question: 2,
+      answer: 'a'
     }
   ]
 
   const containerStartBtn = document.querySelector('#container-start-button')
   const containerQuestions = document.querySelector('#container-questions')
+  const containerResult = document.querySelector('#container-result')
+
   const startButton = document.querySelector('#start-button')
   startButton.addEventListener('click', () => {
     containerStartBtn.classList.remove('element-active')
     containerQuestions.classList.add('element-active')
 
-    showQuestions(containerQuestions, questions, showQuizResult)
+    showQuestions(showQuizResult)
   })
 
   function showQuizResult(answers) {
-    console.log(answers)
     containerQuestions.classList.remove('element-active')
+    containerResult.classList.add('element-active')
+
+    console.log(answers)
   }
 }
 
