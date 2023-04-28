@@ -26,7 +26,7 @@
 
     <main class="main">
       <div class="center-elements">
-        <div id="container-start-button" class="element">
+        <div id="container-start-button" class="element element-active">
           <div class="container-image">
             <img src="/images/eu-te-amo.jpg" class="image" />
             <h1 class="quiz-title">O quão memista você é?</h1>
@@ -59,24 +59,38 @@
             </ol>
           </div>
         </div>
-        <div id="container-result" class="element element-active">
+        <div id="container-result" class="element">
           <div class="container-image">
             <img src="/images/eu-te-amo.jpg" class="image" />
           </div>
           <h2 class="result">Você Ganhou!!!</h2>
           <p class="total-result">Total de acertos: 9/15</p>
           <button class="btn-quiz">
-            <img src="/images/reload.svg" alt="Ícone de recarregar" />
+            <img src="/images/reload.svg" class="icon" alt="Ícone de recarregar" />
             Refazer
           </button>
-          <div>
-            <h2>Compartilhe com os amigos</h2>
-            <img class="icon" src="/images/share.svg" alt="">
-
-            <img src="/images/whatsapp.svg" alt="">
-            <img src="/images/facebook.svg" alt="">
-            <img src="/images/twitter.svg" alt="">
-            <img src="/images/copy.svg" alt="">
+          <div class="container-sharing">
+            <div class="share">
+              <h2 class="sharing-title">Compartilhe com os amigos</h2>
+              <button id="btn-share">
+                <img src="/images/share.svg" alt="Ícone de compartilhar">
+              </button>
+            </div>
+            
+            <div class="btns-sharing">
+              <button id="btn-whatsapp" class="btn-icon">
+                <img src="/images/whatsapp.svg" alt="Logotipo whatsapp">
+              </button>
+              <button id="btn-facebook" class="btn-icon">
+                <img src="/images/facebook.svg" alt="Logotipo facebook">
+              </button>
+              <button id="btn-twitter" class="btn-icon">
+                <img src="/images/twitter.svg" alt="Logotipo twitter">
+              </button>
+              <button class="btn-icon" id="copy-to-clipboard">
+                <img src="/images/copy.svg" alt="Ícone de copiar para área de transferência">
+              </button>
+            </div>
           </div>
         </div>
       </div>
