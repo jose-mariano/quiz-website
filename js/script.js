@@ -22,33 +22,29 @@ function main() {
     showQuestions(showQuizResult)
   })
 
-  const btnShare = document.querySelector('#btn-share')
-  btnShare.addEventListener('click', () => {
-    console.log('teste')
+  const repeatButton = document.querySelector('#repeat-button')
+  repeatButton.addEventListener('click', () => {
+    containerResult.classList.remove('element-active')
+    containerStartBtn.classList.add('element-active')
   })
-
-  const btnWhatsapp = document.querySelector('#btn-whatsapp')
-  btnWhatsapp.addEventListener(
-    'click',
-    () => openNewWindow('https://api.whatsapp.com/send?text=http://localhost:8080'),
-  )
-
-  const btnTwitter = document.querySelector('#btn-twitter')
-  btnTwitter.addEventListener(
-    'click',
-    () => openNewWindow('https://twitter.com/intent/tweet?text=http://localhost:8080'),
-  )
-
-  const btnFacebook = document.querySelector('#btn-facebook')
-  btnFacebook.addEventListener(
-    'click',
-    () => openNewWindow('https://www.facebook.com/sharer/sharer.php?u=http://localhost:8080'),
-  )
 
   const copyToClipboardButton = document.querySelector('#copy-to-clipboard')
   copyToClipboardButton.addEventListener('click', () => {
     navigator.clipboard.writeText(location.href)
+    showMessage('Link copiado!', 2)
   })
+
+  openSocialMedia('#btn-whatsapp', 'https://api.whatsapp.com/send?text=http://localhost:8080')
+  openSocialMedia('#btn-twitter', 'https://twitter.com/intent/tweet?text=http://localhost:8080')
+  openSocialMedia('#btn-facebook', 'https://www.facebook.com/sharer/sharer.php?u=http://localhost:8080')
+
+  function openSocialMedia(elementId, socialMediaUrl) {
+    const element = document.querySelector(elementId)
+    element.addEventListener(
+      'click',
+      () => openNewWindow(socialMediaUrl),
+    )
+  }
 
   function openNewWindow(url) {
     window.open(
@@ -63,6 +59,21 @@ function main() {
     containerResult.classList.add('element-active')
 
     console.log(answers)
+  }
+
+  function showMessage(message, timeInSeconds = null) {
+    const body = document.querySelector('body')
+    const div = document.createElement('div')
+    div.classList.add('popup')
+    div.innerHTML = `<span>${message}</span>`
+
+    body.appendChild(div)
+
+    if(timeInSeconds){
+      setTimeout(() => {
+        body.removeChild(div)
+      }, timeInSeconds * 1000)
+    }
   }
 }
 

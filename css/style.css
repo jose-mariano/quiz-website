@@ -1,3 +1,19 @@
+.popup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 7vh;
+}
+
+.popup span {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  padding: 1rem;
+}
+
 .center-elements {
   display: flex;
   justify-content: center;
@@ -153,22 +169,19 @@
 }
 
 .btn-icon {
-  margin: 0.5rem;
+  width: 40px;
+  height: 40px;
+  margin: 0.3rem;
   background: transparent;
+  border-radius: 25px;
   cursor: pointer;
 }
 
 .btn-icon:hover {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
   background: #7a59b046;
 }
 
 .btn-icon:active {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
   background: #7a59b095;
 }
 
@@ -176,10 +189,6 @@
   width: 16.5rem;
   display: flex;
   justify-content: start;
-}
-
-.share button {
-  background: transparent;
 }
 
 .footer {

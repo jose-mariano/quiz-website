@@ -6,12 +6,12 @@ function showQuestions(sendAnswers) {
   }
 
   function nextQuestion() {
-    if(state.questions.length === 0) {
-      return sendAnswers(state.answers)
-    }
-
     if(state.currentQuestion) {
       state.currentQuestion.classList.remove('element-active')
+    }
+
+    if(state.questions.length === 0) {
+      return sendAnswers(state.answers)
     }
 
     state.currentQuestion = state.questions.shift()
@@ -20,7 +20,7 @@ function showQuestions(sendAnswers) {
 
   const alternatives = document.querySelectorAll('.alternative')
   for (const alternative of alternatives) {
-    alternative.addEventListener('click', () => {
+    alternative.onclick = () => {
       const questionNumber = alternative.dataset.question
       const answer = alternative.dataset.answer
 
@@ -31,7 +31,7 @@ function showQuestions(sendAnswers) {
         })
         nextQuestion()
       }
-    })
+    }
   }
 
   nextQuestion()
