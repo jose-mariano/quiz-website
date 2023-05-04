@@ -1,12 +1,29 @@
 function main() {
-  const answers = [
+  const currentUrl = location.href
+
+  const questions = [
     {
-      question: 1,
-      answer: 'c'
+      number: '1',
+      answer: 'a'
     },
     {
-      question: 2,
-      answer: 'a'
+      number: '2',
+      answer: 'b'
+    }
+  ]
+
+  const possibleResults = [
+    {
+      text: 'Você é ruim!',
+      minEqual: 0
+    },
+    {
+      text: 'Você ganhou!',
+      minEqual: 1
+    },
+    {
+      text: 'Você ganhou 2!',
+      minEqual: 2
     }
   ]
 
@@ -30,13 +47,13 @@ function main() {
 
   const copyToClipboardButton = document.querySelector('#copy-to-clipboard')
   copyToClipboardButton.addEventListener('click', () => {
-    navigator.clipboard.writeText(location.href)
+    navigator.clipboard.writeText(currentUrl)
     showMessage('Link copiado!', 2)
   })
 
-  openSocialMedia('#btn-whatsapp', 'https://api.whatsapp.com/send?text=http://localhost:8080')
-  openSocialMedia('#btn-twitter', 'https://twitter.com/intent/tweet?text=http://localhost:8080')
-  openSocialMedia('#btn-facebook', 'https://www.facebook.com/sharer/sharer.php?u=http://localhost:8080')
+  openSocialMedia('#btn-whatsapp', `https://api.whatsapp.com/send?text=${currentUrl}`)
+  openSocialMedia('#btn-twitter', `https://twitter.com/intent/tweet?text=${currentUrl}`)
+  openSocialMedia('#btn-facebook', `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`)
 
   function openSocialMedia(elementId, socialMediaUrl) {
     const element = document.querySelector(elementId)
@@ -57,8 +74,20 @@ function main() {
   function showQuizResult(answers) {
     containerQuestions.classList.remove('element-active')
     containerResult.classList.add('element-active')
+    
+    let totalResult = 0
 
-    console.log(answers)
+    for(const question of questions) {
+      const answer = answers.find((currentAnswer) => question.number === currentAnswer.question)
+      if(answer && question.answer === answer.value){
+        totalResult++
+      }
+    }
+
+    const resultText = getResultText(totalResult, possibleResults)
+    document.querySelector('.result').innerText = resultText
+    document.querySelector('.total-result').innerText = `Total de acertos: ${totalResult}/${questions.length}`
+    document.title = `${resultText} - Quiz`
   }
 
   function showMessage(message, timeInSeconds = null) {
@@ -74,6 +103,15 @@ function main() {
         body.removeChild(div)
       }, timeInSeconds * 1000)
     }
+  }
+
+  function getResultText(totalResult, possibleResults) {
+    for(const result of possibleResults){
+      if(totalResult <= result.minEqual){
+        return result.text
+      }
+    }
+    return ''
   }
 }
 

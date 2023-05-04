@@ -27,7 +27,7 @@ function showQuestions(sendAnswers) {
       if (questionNumber === state.currentQuestion.dataset.question) {
         state.answers.push({
           question: questionNumber,
-          answer
+          value: answer
         })
         nextQuestion()
       }

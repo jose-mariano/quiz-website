@@ -125,11 +125,12 @@
   list-style-type: lower-alpha;
   list-style-position: inside;
   width: 100%;
+  padding: 1rem 0;
 }
 
 .alternative {
-  margin: 1rem 0;
   padding: 1rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
   background: white;
   font-weight: bolder;
