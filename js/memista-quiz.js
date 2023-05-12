@@ -18,27 +18,27 @@ function main() {
     },
     {
       number: '5',
-      answer: ''
+      answer: 'd'
     },
     {
       number: '6',
-      answer: ''
+      answer: 'c'
     },
     {
       number: '7',
-      answer: ''
+      answer: 'a'
     },
     {
       number: '8',
-      answer: ''
+      answer: 'c'
     },
     {
       number: '9',
-      answer: ''
+      answer: 'd'
     },
     {
       number: '10',
-      answer: ''
+      answer: 'b'
     }
   ]
 
