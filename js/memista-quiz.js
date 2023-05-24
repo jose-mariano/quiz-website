@@ -45,15 +45,15 @@ function main() {
   const possibleResults = [
     {
       text: 'Você é ruim!',
-      minEqual: 0
+      minEqual: 4
     },
     {
       text: 'Você ganhou!',
-      minEqual: 1
+      minEqual: 8
     },
     {
       text: 'Você ganhou 2!',
-      minEqual: 2
+      minEqual: 10
     }
   ]
 
