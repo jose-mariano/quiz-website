@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Teste seus conhecimentos sobre memes respondendo esse quiz rápido e divertido! Compartilhe com os amigos e veja quem conhece mais sobre memes!">
 
-    <meta name="description" content="page description" />
-    <meta property="og:title" content="page title" />
-    <meta property="og:description" content="page description" />
-    <meta property="og:url" content="page url" />
-    <meta property="og:image" content="image url" />
+    <meta property="og:title" content="O quão memista você é?">
+    <meta property="og:description" content="Teste seus conhecimentos sobre memes respondendo esse quiz rápido e divertido! Compartilhe com os amigos e veja quem conhece mais sobre memes!">
+    <meta property="og:url" content="http://localhost:8080/">
+    <meta property="og:image" content="http://localhost:8080/images/nazare.jpeg">
 
-    <link type="text/css" rel="stylesheet" href="/css/reset.min.css" />
-    <link type="text/css" rel="stylesheet" href="/css/style.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/reset.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/style.min.css">
 
-    <title>Quiz</title>
+    <link rel="icon" type="image/x-icon" href="/images/quiz-logo.ico">
+
+    <title>O quão memista você é? - Quiz</title>
   </head>
 
   <body>
@@ -28,7 +30,7 @@
       <div class="center-elements">
         <div id="container-start-button" class="element element-active">
           <div class="container-image">
-            <img src="/images/nazare.jpeg" class="image" />
+            <img src="/images/nazare.jpeg" alt="Meme da Nazaré" class="image">
             <h1 class="quiz-title">O quão memista você é?</h1>
           </div>
           <button id="start-button" class="btn-quiz">Iniciar Quiz</button>
@@ -36,9 +38,9 @@
         <div id="container-questions" class="element">
           <div class="question" data-question="1">
             <div class="container-image">
-              <img src="/images/meme-irineu.jpeg" alt="Meme Irineu" class="image" />
+              <img src="/images/meme-irineu.jpeg" alt="Meme do Irineu" class="image">
             </div>
-            <h2 class="question-title">Que é esse homem?</h2>
+            <h2 class="question-title">Quem é esse homem?</h2>
             <ol class="question-alternatives">
               <li class="alternative" data-question="1" data-answer="a">Pelé</li>
               <li class="alternative" data-question="1" data-answer="b">Irineu</li>
@@ -48,7 +50,7 @@
           </div>
           <div class="question" data-question="2">
             <div class="container-image">
-              <img src="/images/meme-brasil-na-copa.jpeg" alt="Meme brasil na copa" class="image" />
+              <img src="/images/meme-brasil-na-copa.jpeg" alt="Meme brasil na copa" class="image">
             </div>
             <h2 class="question-title">De que ano é esse meme?</h2>
             <ol class="question-alternatives">
@@ -60,7 +62,7 @@
           </div>
           <div class="question" data-question="3">
             <div class="container-image">
-              <img src="/images/meme-acerto-miseravi.jpeg" alt="Meme acerto miseravi" class="image" />
+              <img src="/images/meme-acerto-miseravi.jpeg" alt="Meme acerto miseravi" class="image">
             </div>
             <h2 class="question-title">Quanto é 2 + 2?</h2>
             <ol class="question-alternatives">
@@ -72,7 +74,7 @@
           </div>
           <div class="question" data-question="4">
             <div class="container-image">
-              <img src="/images/meme-serjao-berranteiro.jpeg" alt="Meme serjão berranteiro" class="image" />
+              <img src="/images/meme-serjao-berranteiro.jpeg" alt="Meme serjão berranteiro" class="image">
             </div>
             <h2 class="question-title">Como esse homem é conhecido?</h2>
             <ol class="question-alternatives">
@@ -84,7 +86,7 @@
           </div>
           <div class="question" data-question="5">
             <div class="container-image">
-              <img src="/images/meme-caneta.jpg" class="image" />
+              <img src="/images/meme-caneta.jpg" alt="Meme do Manoel Gomes" class="image">
             </div>
             <h2 class="question-title">Qual a cor da caneta dele?</h2>
             <ol class="question-alternatives">
@@ -96,9 +98,9 @@
           </div>
           <div class="question" data-question="6">
             <div class="container-image">
-              <img src="/images/meme-5-reais.jpg" class="image" />
+              <img src="/images/meme-5-reais.jpg" alt="Meme do Galo Cego" class="image">
             </div>
-            <h2 class="question-title">Pra que ele quer 5 reais?</h2>
+            <h2 class="question-title">Para que ele quer 5 reais?</h2>
             <ol class="question-alternatives">
               <li class="alternative" data-question="6" data-answer="a">Comprar cachaça</li>
               <li class="alternative" data-question="6" data-answer="b">Comprar fruta</li>
@@ -108,7 +110,7 @@
           </div>
           <div class="question" data-question="7">
             <div class="container-image">
-              <img src="/images/meme-papai-noel.jpeg" class="image" />
+              <img src="/images/meme-papai-noel.jpeg" alt="Meme do papai noel panificadora" class="image">
             </div>
             <h2 class="question-title">Do que o papai noel mais gosta?</h2>
             <ol class="question-alternatives">
@@ -120,7 +122,7 @@
           </div>
           <div class="question" data-question="8">
             <div class="container-image">
-              <img src="/images/meme-calca-para-jovem.jpeg" class="image" />
+              <img src="/images/meme-calca-para-jovem.jpeg" alt="Meme calça para uma jovem" class="image">
             </div>
             <h2 class="question-title">Quanto custa uma calça para uma jovem de 16 anos?</h2>
             <ol class="question-alternatives">
@@ -132,7 +134,7 @@
           </div>
           <div class="question" data-question="9">
             <div class="container-image">
-              <img src="/images/meme-meu-cachorro.jpeg" class="image" />
+              <img src="/images/meme-meu-cachorro.jpeg" alt="Meme do cachorro Magrelinho" class="image">
             </div>
             <h2 class="question-title">Qual o nome do cachorro?</h2>
             <ol class="question-alternatives">
@@ -144,7 +146,7 @@
           </div>
           <div class="question" data-question="10">
             <div class="container-image">
-              <img src="/images/meme-pica-pau.jpg" class="image" />
+              <img src="/images/meme-pica-pau.jpg" alt="Meme do Pica-Pau quero morrer de catapora" class="image">
             </div>
             <h2 class="question-title">O que o Pica-Pau vai dizer?</h2>
             <ol class="question-alternatives">
@@ -156,13 +158,9 @@
           </div>
         </div>
         <div id="container-result" class="element">
-          <div class="container-image">
-            <img src="/images/eu-te-amo.jpg" class="image" />
-          </div>
-          <h2 class="result"></h2>
-          <p class="total-result"></p>
+          <div id="result"></div>
           <button id="repeat-button" class="btn-quiz">
-            <img src="/images/reload.svg" class="icon" alt="Ícone de recarregar" />
+            <img src="/images/reload.svg" class="icon" alt="Ícone de recarregar">
             Refazer
           </button>
           <div class="container-sharing">
@@ -194,8 +192,8 @@
       <p>©Copyright <span id="current-year"></span><p>
     </footer>
 
-    <script type="text/javascript" src="/js/util.min.js"></script>
-    <script type="text/javascript" src="/js/memista-quiz.js"></script>
+    <script src="/js/util.min.js"></script>
+    <script src="/js/memista-quiz.js"></script>
     <script>document.querySelector('#current-year').innerText=(new Date()).getFullYear()</script>
   </body>
 </html>

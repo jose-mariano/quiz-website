@@ -167,6 +167,7 @@ body {
 }
 
 .total-result {
+  text-align: center;
   font-weight: bolder;
   margin-bottom: 1rem;
 }

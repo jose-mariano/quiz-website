@@ -45,15 +45,21 @@ function main() {
   const possibleResults = [
     {
       text: 'Você é ruim!',
-      minEqual: 4
+      minEqual: 4,
+      imgSrc: '/images/eu-a-patroa-e-as-criancas-nah.gif',
+      imgAlt: 'Michael de eu a patroa e as crianças dizendo nah'
     },
     {
       text: 'Você ganhou!',
-      minEqual: 8
+      minEqual: 8,
+      imgSrc: '/images/menino-dando-joinha.gif',
+      imgAlt: 'Menino dando joinha na frente do computador'
     },
     {
       text: 'Você ganhou 2!',
-      minEqual: 10
+      minEqual: 10,
+      imgSrc: '/images/brooklyn-nine-nine-comemoracao.gif',
+      imgAlt: 'Equipe do brooklyn nine nine comemorando'
     }
   ]
 

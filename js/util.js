@@ -22,10 +22,12 @@ function renderQuiz(questions, possibleResults) {
         }
       }
 
-      const resultText = getResultText(totalResult, possibleResults)
-      document.querySelector('.result').innerText = resultText
-      document.querySelector('.total-result').innerText = `Total de acertos: ${totalResult}/${questions.length}`
-      document.title = `${resultText} - Quiz`
+      const result = getResult(totalResult, possibleResults)
+      const resultElement = document.querySelector('#result')
+
+      resultElement.innerHTML += `<div class="container-image"><img src="${result.imgSrc}" alt="${result.imgAlt}" class="image"></div>`
+      resultElement.innerHTML += `<h2 class="result">${result.text}</h2>`
+      resultElement.innerHTML += `<p class="total-result">Total de acertos: ${totalResult}/${questions.length}</p>`
     })
 
     window.scroll(0, window.screen.height)
@@ -87,13 +89,14 @@ function showQuestions(sendAnswers) {
   nextQuestion()
 }
 
-function getResultText(totalResult, possibleResults) {
+function getResult(totalResult, possibleResults) {
   for(const result of possibleResults){
     if(totalResult <= result.minEqual){
-      return result.text
+      return { text: result.text, imgSrc: result.imgSrc, imgAlt: result.imgAlt }
     }
   }
-  return ''
+
+  return {}
 }
 
 function showMessage(message, timeInSeconds = null) {
