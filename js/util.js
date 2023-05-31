@@ -25,8 +25,9 @@ function renderQuiz(questions, possibleResults) {
       const result = getResult(totalResult, possibleResults)
       const resultElement = document.querySelector('#result')
 
+      resultElement.innerHTML = ''
       resultElement.innerHTML += `<div class="container-image"><img src="${result.imgSrc}" alt="${result.imgAlt}" class="image"></div>`
-      resultElement.innerHTML += `<h2 class="result">${result.text}</h2>`
+      resultElement.innerHTML += `<h2 class="title-result">${result.text}</h2>`
       resultElement.innerHTML += `<p class="total-result">Total de acertos: ${totalResult}/${questions.length}</p>`
     })
 
