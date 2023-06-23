@@ -46,19 +46,19 @@ function main() {
     {
       text: 'Ops!<br>Estude mais memeologia!',
       minEqual: 4,
-      imgSrc: '/quiz-website/public/images/eu-a-patroa-e-as-criancas-nah.gif',
+      imgSrc: '/public/images/eu-a-patroa-e-as-criancas-nah.gif',
       imgAlt: 'Michael de eu a patroa e as crianças dizendo nah'
     },
     {
       text: 'Excelente!<br>Você é um bom Memólogo!',
       minEqual: 8,
-      imgSrc: '/quiz-website/public/images/menino-dando-joinha.gif',
+      imgSrc: '/public/images/menino-dando-joinha.gif',
       imgAlt: 'Menino dando joinha na frente do computador'
     },
     {
       text: 'Impressionante!<br>Você é um Memestre imbatível!',
       minEqual: 10,
-      imgSrc: '/quiz-website/public/images/brooklyn-nine-nine-comemoracao.gif',
+      imgSrc: '/public/images/brooklyn-nine-nine-comemoracao.gif',
       imgAlt: 'Equipe do brooklyn nine nine comemorando'
     }
   ]
