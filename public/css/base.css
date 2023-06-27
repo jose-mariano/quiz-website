@@ -72,6 +72,7 @@ body {
   bottom: 0.1rem;
   border-radius: 0 0 1rem 1rem;
   background-color: rgba(0, 0, 0, 0.45);
+  text-shadow: 0.1em 0.1em 0.2em black;
   color: white;
 }
 
@@ -94,7 +95,7 @@ body {
 }
 
 .btn-quiz {
-  width: 80%;
+  width: 60%;
   max-width: 21rem;
   margin: 1rem 0;
   padding: 1rem;
@@ -126,7 +127,7 @@ body {
 .question-title, .sharing-title {
   text-align: left;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.5rem 0;
 }
 
@@ -170,7 +171,7 @@ body {
   width: 100%;
   text-align: center;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0.6rem 0;
 }
 
@@ -185,10 +186,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.btns-sharing, .share {
-  margin-top: 1em;
+.sharing-title {
+  font-size: 1.2rem;
 }
 
 .btn-icon {
@@ -214,6 +217,27 @@ body {
   justify-content: start;
 }
 
+.recommended {
+  margin-top: 1rem;
+}
+
+.recommended-title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.8rem;
+}
+
+.quiz-list .container-image {
+  margin: 0;
+}
+
 .footer {
   width: 100%;
   height: 6vh;
@@ -228,16 +252,46 @@ body {
     margin-top: 8vh;
   }
 
+  .btn-quiz {
+    width: 40%;
+  }
+
   .container-sharing {
-    align-items: center;
+    margin-top: 1rem;
+    padding: 0;
   }
 
   .share {
     width: 100%;
-    justify-content: center;
   }
 
-  .sharing-title {
-    margin-right: 1rem;
+  .sharing-title, .btns-sharing {
+    padding: 0 1rem;
+  }
+
+  .recommended {
+    margin-top: 1rem;
+  }
+
+  .recommended-title {
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+
+  .quiz-list {
+    column-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .quiz-list .quiz-title {
+    font-size: 1rem;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .quiz-list .quiz-title:hover {
+    white-space: normal;
   }
 }
