@@ -44,22 +44,22 @@ function main() {
 
   const possibleResults = [
     {
-      text: 'Ops!<br>Estude mais memeologia!',
+      text: 'Anota ai!<br>Assistir mais a série!',
       minEqual: 4,
-      imgSrc: '/public/images/eu-a-patroa-e-as-criancas-nah.gif',
-      imgAlt: 'Michael de eu a patroa e as crianças dizendo nah'
+      imgSrc: '/public/images/epc-quiz/junior-com-caderneta.jpeg',
+      imgAlt: 'Júnior anotando o que michael está dizendo'
     },
     {
       text: 'Excelente!<br>Você é um bom Memólogo!',
       minEqual: 8,
-      imgSrc: '/public/images/menino-dando-joinha.gif',
-      imgAlt: 'Menino dando joinha na frente do computador'
+      imgSrc: '/public/images/epc-quiz/michael-sorrindo.jpeg',
+      imgAlt: 'Michael sorrindo'
     },
     {
-      text: 'Impressionante!<br>Você é um Memestre imbatível!',
+      text: 'Você é quase um membro da familia Kyle!',
       minEqual: 10,
-      imgSrc: '/public/images/brooklyn-nine-nine-comemoracao.gif',
-      imgAlt: 'Equipe do brooklyn nine nine comemorando'
+      imgSrc: '/public/images/epc-quiz/franklin-sorrindo.jpeg',
+      imgAlt: 'Franklin sorrindo em frente ao computador'
     }
   ]
 

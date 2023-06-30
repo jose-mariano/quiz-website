@@ -14,9 +14,14 @@
   margin: 1rem 0;
 }
 
+.image {
+  width: 19rem;
+  height: 12rem;
+}
+
 @media only screen and (min-width: 600px) {
   .main {
-    max-width: 60rem;
+    max-width: 100%;
   }
 
   .home-title {
@@ -26,7 +31,8 @@
   .grid {
     column-gap: 2rem;
     row-gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 19rem);
+    justify-content: center;
   }
 
   .container-image {

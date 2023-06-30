@@ -2,6 +2,21 @@ body {
   background-color: #E5E5E5;
 }
 
+.navigation, .center-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation a {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  width: 50%;
+}
+
 .popup {
   width: 100%;
   display: flex;
@@ -16,12 +31,6 @@ body {
   border-radius: 0.5rem;
   font-weight: bolder;
   padding: 1rem;
-}
-
-.center-elements {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .header {
@@ -221,6 +230,10 @@ body {
   margin-top: 1rem;
 }
 
+.recommended .image {
+  height: 12rem;
+}
+
 .recommended-title {
   font-size: 1.2rem;
   font-weight: bolder;
@@ -243,6 +256,15 @@ body {
   height: 6vh;
   background-color: #7A59B0;
   color: white
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgb(185, 164, 204);
 }
 
 @media only screen and (min-width: 600px) {
@@ -271,6 +293,10 @@ body {
 
   .recommended {
     margin-top: 1rem;
+  }
+
+  .recommended .image {
+    height: 8rem;
   }
 
   .recommended-title {
