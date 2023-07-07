@@ -44,13 +44,13 @@ function main() {
 
   const possibleResults = [
     {
-      text: 'Anota ai!<br>Assistir mais a série!',
+      text: 'Anota ai!<br> Assistir mais a série!',
       minEqual: 4,
       imgSrc: '/public/images/epc-quiz/junior-com-caderneta.jpeg',
       imgAlt: 'Júnior anotando o que michael está dizendo'
     },
     {
-      text: 'Excelente!<br>Você é um bom Memólogo!',
+      text: 'Sua pontuação é tão impressionante<br> quanto as trapalhadas do Junior!',
       minEqual: 8,
       imgSrc: '/public/images/epc-quiz/michael-sorrindo.jpeg',
       imgAlt: 'Michael sorrindo'
