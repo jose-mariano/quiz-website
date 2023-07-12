@@ -14,7 +14,19 @@ body {
 }
 
 .logo {
-  width: 50%;
+  height: 2rem;
+}
+
+.icon-home {
+  width: 10vh;
+  height: 8vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.icon-home-svg {
+  width: 1.5rem;
 }
 
 .popup {

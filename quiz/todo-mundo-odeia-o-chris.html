@@ -9,11 +9,11 @@
     <meta property="og:title" content="Todo mundo odeia o Chris">
     <meta property="og:type" content="game">
     <meta property="og:description" content="O quanto você conhece sobre o carinha que mora logo ali e sua familia? Teste seus conhecimentos com relação a esse cara tão odiado na série, mas amado pelos fãs!">
-    <meta property="og:url" content="https://jose-mariano.github.io/quiz/todo-mundo-odeia-o-chris.html">
-    <meta property="og:image" content="https://jose-mariano.github.io/public/images/tmoc-quiz/todo-mundo-odeia-o-chris.jpeg">
+    <meta property="og:url" content="/quiz/todo-mundo-odeia-o-chris.html">
+    <meta property="og:image" content="/public/images/tmoc-quiz/todo-mundo-odeia-o-chris.jpeg">
 
-    <link type="text/css" rel="stylesheet" href="/public/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/public/css/reset.min.css">
+    <link type="text/css" rel="stylesheet" href="/public/css/base.min.css">
 
     <link rel="icon" type="image/x-icon" href="/public/images/quizzone-logo.ico">
 
@@ -23,6 +23,10 @@
   <body>
     <header class="header center-elements">
       <nav class="navigation">
+        <div class="icon-home center-elements">
+          <a href="/"><img class="icon-home-svg" src="/public/images/icon-home.svg" alt="quizzone logo"></a>
+        </div>
+        </nav>
         <a href="/"><img class="logo" src="/public/images/quizzone.png" alt="quizzone logo"></a>
       </nav>
     </header>
@@ -200,12 +204,6 @@
                   <h1 class="quiz-title">O quão memista você é?</h1>
                 </div>
               </a>
-              <a href="/quiz/memes.html">
-                <div class="container-image">
-                  <img src="/public/images/meme-quiz/nazare.jpeg" alt="Meme da Nazaré" class="image">
-                  <h1 class="quiz-title">O quão memista você é?</h1>
-                </div>
-              </a>
             </div>
           </div>
         </div>
@@ -216,8 +214,8 @@
       <p>©Copyright <span id="current-year"></span><p>
     </footer>
 
-    <script src="/public/js/util.js"></script>
-    <script src="/public/js/tmoc-quiz.js"></script>
+    <script src="/public/js/util.min.js"></script>
+    <script src="/public/js/tmoc-quiz.min.js"></script>
     <script>document.querySelector('#current-year').innerText=(new Date()).getFullYear()</script>
   </body>
 </html>

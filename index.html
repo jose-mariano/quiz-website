@@ -5,17 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link type="text/css" rel="stylesheet" href="/public/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/base.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/home.css">
+    <meta property="og:title" content="Escolha qual quiz deseja fazer e divirta-se!">
+    <meta property="og:type" content="game">
+    <meta property="og:description" content="Teste seus conhecimentos respondendo perguntas sobre assuntos que você gosta!">
+    <meta property="og:url" content="/">
+    <meta property="og:image" content="/public/images/quizzone.png">
+
+    <link type="text/css" rel="stylesheet" href="/public/css/reset.min.css">
+    <link type="text/css" rel="stylesheet" href="/public/css/base.min.css">
+    <link type="text/css" rel="stylesheet" href="/public/css/home.min.css">
 
     <link rel="icon" type="image/x-icon" href="/public/images/quizzone-logo.ico">
 
-    <title>Quiz</title>
+    <title>Quiz Zone</title>
   </head>
   <body>
     <header class="header center-elements">
       <nav class="navigation">
+        <div class="icon-home center-elements">
+          <a href="/"><img class="icon-home-svg" src="/public/images/icon-home.svg" alt="quizzone logo"></a>
+        </div>
+        </nav>
         <a href="/"><img class="logo" src="/public/images/quizzone.png" alt="quizzone logo"></a>
       </nav>
     </header>
@@ -47,35 +57,13 @@
             </div>
           </a>
         </div>
-        <div class="element element-active">
-          <a href="/quiz/memes.html">
-            <div class="container-image">
-              <img src="/public/images/meme-quiz/nazare.jpeg" alt="Meme da Nazaré" class="image">
-              <h1 class="quiz-title">O quão memista você é?</h1>
-            </div>
-          </a>
-        </div>
-        <div class="element element-active">
-          <a href="/quiz/memes.html">
-            <div class="container-image">
-              <img src="/public/images/meme-quiz/nazare.jpeg" alt="Meme da Nazaré" class="image">
-              <h1 class="quiz-title">O quão memista você é?</h1>
-            </div>
-          </a>
-        </div>
-        <div class="element element-active">
-          <a href="/quiz/memes.html">
-            <div class="container-image">
-              <img src="/public/images/meme-quiz/nazare.jpeg" alt="Meme da Nazaré" class="image">
-              <h1 class="quiz-title">O quão memista você é?</h1>
-            </div>
-          </a>
-        </div>
       </div>
     </main>
 
     <footer class="footer center-elements">
       <p>©Copyright <span id="current-year"></span><p>
     </footer>
+
+    <script>document.querySelector('#current-year').innerText=(new Date()).getFullYear()</script>
   </body>
 </html>
